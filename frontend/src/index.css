@@ -1,0 +1,102 @@
+:root{
+  --color-accent: #4f1769;
+  --color-contrast: #1cb924;
+  --color-bg: #d1d5d1;
+}
+
+body{
+  background-color: var(--color-bg);
+}
+
+.btn-primary{
+  background-color: var(--color-accent);
+  color: var(--color-contrast);
+  border: 0;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible,
+.btn-primary:focus-within,
+button.btn:active,
+:not(.btn-check)+.btn:active{
+  background-color: var(--color-contrast);
+  color: var(--color-accent);
+  box-shadow: none;
+}
+/* outline */
+.btn-outline-primary{
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:focus-visible,
+.btn-outline-primary:focus-within{
+  background-color: transparent;
+  color: var(--color-contrast);
+  border-color: var(--color-contrast);
+  box-shadow: none;
+}
+
+nav.navbar{
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* RICERCA */
+.search input{
+  background-color: transparent;
+  border-color: var(--color-accent);
+  min-width: 500px;
+}
+.search input:active,
+.search input:focus{
+  background-color: transparent;
+  border-color: var(--color-contrast);
+  box-shadow: none;
+}
+
+/* TABLE */
+
+.table{
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--color-accent);
+}
+.table thead{
+  background-color: var(--color-accent);
+  --bs-table-color: white;
+}
+.synonym-item{
+  font-size: 14px;
+  background-color: #b4a9c0;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.synonym-item.search-highlight{
+  background-color: var(--color-contrast);
+}
+table .actions .btn{
+  color: var(--color-accent);
+}
+
+
+/* PAGINAZIONE */
+
+.pagination .page-link{
+  color: var(--color-contrast);
+  background-color: var(--color-accent);
+  border-top: 0;
+  border-bottom: 0;
+}
+.pagination .page-item.disabled .page-link{
+  background-color: rgb(109, 102, 119);
+}
+.pagination .page-link:focus{
+  box-shadow: none;
+}
+.pagination .active .page-link{
+  background-color: var(--color-contrast);
+  color: var(--color-accent);
+}

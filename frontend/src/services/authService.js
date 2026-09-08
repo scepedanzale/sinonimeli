@@ -1,7 +1,6 @@
 const API_URL = "/api";
 
 export async function login(email, password) {
-    console.log(email, password)
     const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: {

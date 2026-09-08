@@ -41,7 +41,8 @@ app.use("/synonyms", synonymsRoutes);
 // LOGIN
 app.post("/login", async (req, res) => {
     try {
-        const { email, password } = req.body;
+        
+const { email, password } = req.body;
 
         if (!email || !password) {
             return res.status(400).json({
@@ -53,7 +54,6 @@ app.post("/login", async (req, res) => {
             "SELECT id, email, password FROM users WHERE email = ?",
             [email]
         );
-
         if (users.length === 0) {
             return res.status(401).json({
                 message: "Credenziali non valide",
@@ -143,8 +143,4 @@ app.post("/logout", (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(
-        `Server in ascolto sulla porta ${process.env.PORT || 3000}`
-    );
-});
+app.listen(process.env.PORT || 3000);
